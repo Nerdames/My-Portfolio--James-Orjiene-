@@ -225,6 +225,55 @@ main{
     font-weight: 500;
   }
 
+  .projects{
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    row-gap: 20px;
+  }
+
+  .project-preview{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--white);
+  }
+
+  .project-preview img{
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .project-caption{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--white);
+    padding: 20px;
+  }
+
+  .project-name{
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .project-link{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 0.5px solid var(--active-color);
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 30px;
+    color: var(--primary-color);
+    text-wrap: nowrap;
+  }
+
 
 
 
