@@ -49,11 +49,21 @@ a{
 
 header{
     grid-area: header;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 999;
+    backdrop-filter: blur(4px);
 }
+
+header.sticky {
+    background-color: #f0a40073; /* Maintain background color */
+    color: var(--primary-color) /* Change text color when sticky */
+  }
 
 header h1{
     font-weight: 800;
@@ -260,6 +270,7 @@ main{
   .project-name{
     font-size: 1.2rem;
     font-weight: 600;
+    user-select: none;
   }
 
   .project-link{
@@ -270,9 +281,87 @@ main{
     width: fit-content;
     padding: 4px 12px;
     border-radius: 30px;
-    color: var(--primary-color);
+    color: var(--active-color);
     text-wrap: nowrap;
   }
+
+  .project-link:hover{
+    background-color: var(--active-color);
+    color: var(--white);
+  }
+
+  .resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+  }
+  
+  .resume-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .resume-header div {
+    flex: 1 1 300px; /* Allows flexibility on smaller screens */
+  }
+  
+  .resume-header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--active-color);
+  }
+  
+  .resume-header p {
+    margin: 5px 0;
+    font-size: 1em;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    border-bottom: 2px solid var(--active-color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .job, .degree {
+    margin-bottom: 15px;
+  }
+  
+  .contact a {
+    color: var(--active-color);
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+
+  
 
 
 
@@ -292,6 +381,7 @@ main{
 
 
   @media (max-width:720px){
+    header{}
     .sidebar{
         flex-direction: column;
         position: fixed;
@@ -301,6 +391,7 @@ main{
         width: 40%;
         min-height: 100%;
         z-index: 998;
+        row-gap: 20px;
         opacity: 0; /* Initially hidden */
         transition: opacity 0.5s ease-out; /* Add transition effect */
         display: none;

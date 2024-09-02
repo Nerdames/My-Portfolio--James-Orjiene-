@@ -1,4 +1,4 @@
-// script.js
+// show sidebar
 function showSideBar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'flex'; // Make the sidebar visible
@@ -15,3 +15,22 @@ function showSideBar() {
     }, { once: true }); // Use `once` to ensure the event listener is removed after it runs once
   }
   
+
+  // Sticky Header
+window.onscroll = function() {
+  makeHeaderSticky();
+};
+
+function makeHeaderSticky() {
+  const header = document.querySelector("header");
+  const sticky = header.offsetTop; // Get the offset position of the header
+
+  if (window.pageYOffset > sticky) {
+    header.style.position = "fixed"; // Make the header fixed
+    header.style.top = "0"; // Stick it to the top
+    header.classList.add("sticky"); // Add sticky class for color change
+  } else {
+    header.style.position = "relative"; // Reset to default
+    header.classList.remove("sticky"); // Remove sticky class for color reset
+  }
+}
