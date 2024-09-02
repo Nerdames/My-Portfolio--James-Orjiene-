@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>James Orjiene | Web Developer Portfolio</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Portfolio.</h1>
+
+            <ul class="sidebar">
+                <li class="hideSideBar" onclick="hideSideBar()"><span class="material-symbols-outlined">close</span></li>
+                <li><a class="pages" href="index.html"><span class="material-symbols-outlined">home</span>Home</a></li>
+                <li><a class="pages active" href="about.html"><span class="material-symbols-outlined">info</span>About</a></li>
+                <li><a class="pages" href="project.html"><span class="material-symbols-outlined">assignment_turned_in</span>Projects</a></li>
+                <li><a class="pages" href="resume.html"><span class="material-symbols-outlined">assignment_ind</span>Resume</a></li>
+            </ul>
+            <div class="showSideBar" onclick="showSideBar()"><span class="material-symbols-outlined">menu</span></div>
+        </header>
+
+        <main>
+
+            <div class="pitch">
+                <p>I'm  <em class="last-name">James Orjiene</em></p>
+                <p id="about">As a dedicated Frontend Developer, I specialize in creating dynamic and responsive web applications with a solid grasp of HTML, CSS, and JavaScript. My familiarity with Figma allows me to seamlessly integrate UI/UX design principles into my development process, ensuring a visually appealing and user-centered experience. I'm currently focused on growing and expanding my expertise, eager to take on new challenges and contribute to innovative projects that push the boundaries of both design and development.</p>
+                <button class="abt-btn" onclick="window.location.href='resume.html'">See Resume <span class="material-symbols-outlined">assignment_ind</span></button>
+                <div class="button-park">
+                    <button class="hexagon-button"><box-icon type='logo' name='facebook' animation='tada-hover'></box-icon></button>
+                    <button class="hexagon-button"><box-icon type='logo' name='github' animation='tada-hover'></box-icon></button>
+                    <button class="hexagon-button" onclick="window.location.href='https://www.linkedin.com/in/jamesorji/'"><box-icon type='logo' name='linkedin' animation='tada-hover'></box-icon></button>
+                    <button class="hexagon-button"><box-icon type='logo' name='whatsapp' animation='tada-hover'></box-icon></button>
+                    <button class="hexagon-button"><box-icon type='logo' name='figma' animation='tada-hover'></box-icon></button>
+                    <button class="hexagon-button" onclick="window.location.href='mailto:nerdames@gmail.com'"><box-icon name='gmail' type='logo' animation='tada-hover'></box-icon></button>
+                  </div>
+            </div>
+
+            <div class="hexagon-image-container">
+                <img src="IMG_3351 (2).jpg" alt="" class="hexagon-image">
+            </div>
+
+
+        </main>
+
+
+    </div>
+    
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
